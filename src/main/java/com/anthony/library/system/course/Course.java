@@ -15,7 +15,7 @@ public class Course extends BaseEntity {
     }
 
     private Course(Builder builder) {
-        super();;
+        super();
         this.name = builder.name;
         this.code = builder.code;
     }
