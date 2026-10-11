@@ -9,13 +9,13 @@ public record StudentRequest(
         @Pattern(regexp = "^[0-9]{12}$")
         String enrollmentNumber,
         @NotBlank
-        @Size(min = 1, max = 50)
+        @Size(max = 50)
         String firstName,
         @NotBlank
-        @Size(min = 1, max = 50)
+        @Size(max = 50)
         String lastName,
         @NotBlank
-        @Pattern(regexp = "^[a-zA-Z0-9_.$+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}$")
+        @Email
         String email,
         @NotBlank
         String courseCode,

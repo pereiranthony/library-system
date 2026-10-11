@@ -14,11 +14,6 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.logout.LogoutHandler;
 
-import static com.anthony.library.system.user.Permission.*;
-import static com.anthony.library.system.user.Role.ADMIN;
-import static com.anthony.library.system.user.Role.MANAGER;
-import static org.springframework.http.HttpMethod.*;
-
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
