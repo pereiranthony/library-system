@@ -50,8 +50,8 @@ public class AuthenticationService {
                 .role(request.role())
                 .build();
         var savedUser = userRepository.save(user);
-        var jwtToken = jwtService.generateToken(user);
-        var refreshToken = jwtService.generateRefreshToken(user);
+        var jwtToken = jwtService.generateToken(savedUser);
+        var refreshToken = jwtService.generateRefreshToken(savedUser);
         saveUserToken(savedUser, jwtToken);
         return new AuthenticationResponse(jwtToken, refreshToken);
     }
