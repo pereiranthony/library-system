@@ -14,6 +14,7 @@ public record RegisterRequest(
         @Email
         String email,
         @NotBlank
+        @Size(min = 8)
         String password,
         @NotNull
         Role role){}
